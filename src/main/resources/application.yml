@@ -1,0 +1,23 @@
+
+spring:
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=erpdb
+    username: sa
+    password: sa
+  mvc:
+    date-format: yyyy-MM-dd
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    servlet:
+      content-type: text/html; charset=utf-8
+
+pagehelper:
+                    helper-dialect: mysql
+                    reasonable: true
+                    support-methods-arguments: true
+                    params: count==countSql
+                    page-size-zero: true
+server:
+  port: 8081

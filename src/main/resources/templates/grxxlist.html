@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Welcome to the No.1 System of human resource</title>
+
+    <!-- Bootstrap CSS -->    
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="/css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="/css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+      <script src="/js/html5shiv.js"></script>
+      <script src="/js/respond.min.js"></script>
+      <script src="/js/lte-ie7.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+  <!-- container section start -->
+  <section id="container" class="">
+      <!--header start-->
+      
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"></div>
+            </div>
+
+            <!--logo start-->
+          <a href="/emp/login" class="logo">NO.1 <span class="lite">SYSTEM</span></a>
+            <!--logo end-->
+
+            <div class="nav search-row" id="top_menu">
+                <!--  search form start -->
+                <ul class="nav top-menu">                    
+                    <li>
+                        <form class="navbar-form">
+                            <input class="form-control" placeholder="Search" type="text">
+                        </form>
+                    </li>                    
+                </ul>
+                <!--  search form end -->                
+            </div>
+
+      </header>      
+      <!--header end-->
+
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">
+                  <li>
+                      <a class="" href="/user/grxx">
+                          <i class="icon_house_alt"></i>
+                          <span>个人信息</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>公告管理</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="/not/list">查看公告信息 </a></li>
+                          <li><a class="" href="/not/add">添加公告信息</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_desktop"></i>
+                          <span>雇员管理</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="/emp/list">查看雇员信息</a></li>
+                          <li><a class="" href="/emp/add">添加雇员信息</a></li>
+                      </ul>
+                  </li>
+                  <li>
+                      <a class="" href="/log/list">
+                          <i class="icon_genius"></i>
+                          <span>日志查看</span>
+                      </a>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_piechart"></i>
+                          <span>部门管理</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="/dept/list">查看部门信息</a></li>
+                          <li><a class="" href="/dept/add">添加部门信息</a></li>
+                      </ul>
+                  </li>
+                  <li class="sub-menu">
+                      <a href="javascript:;" class="">
+                          <i class="icon_table"></i>
+                          <span>职位管理</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="/job/list">查看职位信息</a></li>
+                          <li><a class="" href="/job/add">添加职位信息</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu ">
+                      <a href="javascript:;" class="">
+                          <i class="icon_documents_alt"></i>
+                          <span>用户管理</span>
+                          <span class="menu-arrow arrow_carrot-right"></span>
+                      </a>
+                      <ul class="sub">
+                          <li><a class="" href="/user/list">查看用户信息</a></li>
+                          <li><a class="" href="/user/add"><span>添加用户信息</span></a></li>
+                      </ul>
+                  </li>
+
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+		  <div class="row">
+				<div class="col-lg-12">
+					<h3 class="page-header"><i class="fa fa fa-bars"></i> 查看登录用户信息</h3>
+					<ol class="breadcrumb">
+						<li><i class="fa fa-home"></i><a >人事管理系统</a></li>
+						<li><i class="fa fa-bars"></i>管理员</li>
+						<li><i class="fa fa-square-o"></i>个人信息</li>
+					</ol>
+				</div>
+			</div>
+              <!-- page start-->
+              <div th:text="${mystr}"></div>
+
+              <div class="row">
+                  <div class="col-lg-12">
+                      <div class="table-responsive">
+                          <table class="table table-bordered table-hover table-striped tablesorter">
+                              <thead>
+                              <tr>
+                                  <th>用户名</th>
+                                  <th>账号</th>
+                                  <th>权限</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+<!--                              <tr th:each="User: ${uses}">-->
+                                  <td th:text="${session.userSession.User_name}"></td>
+                                  <td th:text="${session.userSession.Account}"></td>
+                                  <td th:text="${session.userSession.Role_name}"></td>
+<!--                              </tr>-->
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- page end-->
+          </section>
+      </section>
+      <!--main content end-->
+  </section>
+  <!-- container section end -->
+    <!-- javascripts -->
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!-- nice scroll -->
+    <script src="/js/jquery.scrollTo.min.js"></script>
+    <script src="/js/jquery.nicescroll.js" type="text/javascript"></script><!--custome script for all page-->
+    <script src="/js/scripts.js"></script>
+
+
+  </body>
+</html>
